@@ -68,8 +68,6 @@ If any field is not found in the invoice, leave it as an empty string.""",
     try:
         # Parse the content as JSON
         json_result = json.loads(message.content[0].text)
-        # Print formatted JSON
-        print(json.dumps(json_result, indent=4))
         return json_result
     except json.JSONDecodeError:
         print("Error: Could not parse response as JSON")
